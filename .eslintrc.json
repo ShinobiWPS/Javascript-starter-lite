@@ -1,0 +1,118 @@
+{
+  "env": {
+    "browser": true, //to use windows or localstorage,or browser API
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended", // adds some MORE rules by default
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint", //eslint doesn't know about ES6 import
+  "parserOptions": {
+  // 7: add Exponentation operator and Array method includes()
+  // 8: async / await, String methods padStart() & padEnd().
+  // 9: rest, spread, Async Generator, Async for-of, Async Iterators
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "import",
+    "react"
+    //"prettier" // activating esling-plugin-prettier
+  ],
+  "root": true,
+  "rules": {
+
+    // Possible Errors
+    "valid-jsdoc": "warn",
+
+    // Best Practices
+    "eqeqeq": "error",
+    "radix": "error",
+
+    // Strict Mode
+    "strict": ["error", "global"],
+
+    // Variables
+    "no-shadow": "error",
+
+    // Node.js and CommonJS
+
+    // Stylistic Issues
+    "array-bracket-spacing": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": "error",
+    "comma-style": "error",
+    "eol-last": "error",
+    "indent": ["error", "tab"],
+    "jsx-quotes": "error",
+    "key-spacing": ["error", { "mode": "minimum" }],
+    "lines-between-class-members": ["error", "always"],
+    "max-depth": ["error", 4],
+    "max-len": ["error", {"code": 80, "ignoreUrls": true}],
+    "new-cap": ["error", { "capIsNewExceptions": ["URI"] }],
+    "no-multi-spaces": ["error", { "exceptions": {
+      "ImportDeclaration": true,
+      "VariableDeclarator": true
+    }}],
+    // avoid AutoSemicolonInsertion tricky cases when Semi:disabled
+    "no-unexpected-multiline": "error",
+    "no-multiple-empty-lines": ["error", {
+      "max": 2, "maxBOF": 0, "maxEOF": 0
+    }],
+    "object-curly-spacing": ["error", "always"],
+    "operator-linebreak": ["error", "before"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    // disable Semicolon
+    "semi": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
+    "space-in-parens": [ "error", "always" ],
+    "template-curly-spacing": ["error", "always"],
+
+    // ECMAScript 5+
+    "arrow-body-style": "error",
+    "arrow-parens": "error",
+    "arrow-spacing": "error",
+    "generator-star-spacing": ["error", "after"],
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "rest-spread-spacing": "error",
+
+    // Import
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/order": ["error", {
+      "groups": [
+        "builtin",
+        ["external", "internal"],
+        ["parent", "sibling", "index"]
+      ],
+      "newlines-between": "always"
+    }],
+
+    // React
+    "react/jsx-boolean-value": "error",
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-curly-spacing": ["error", {"when": "always", "children": true}],
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx"] }],
+    "react/jsx-tag-spacing": "error",
+    "react/jsx-wrap-multilines": "error",
+    "react/self-closing-comp": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx",".vue"]
+      }
+    }
+  }
+}
