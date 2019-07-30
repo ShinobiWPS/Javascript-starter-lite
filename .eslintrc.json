@@ -5,6 +5,7 @@
 	},
 	"extends": [
 		"eslint:recommended", // adds some MORE rules by default
+		"standard",
 		"plugin:import/errors",
 		"plugin:import/warnings",
 		"plugin:react/recommended"
@@ -23,7 +24,6 @@
 	"plugins": [
 		"import",
 		"react"
-		//"prettier" // activating esling-plugin-prettier
 	],
 	"root": true,
 	"rules": {
@@ -31,14 +31,10 @@
 		"valid-jsdoc": "warn",
 
 		// Best Practices
-		"eqeqeq": "error",
 		"radix": "error",
 
 		// Strict Mode
 		"strict": ["error", "global"],
-
-		// Variables
-		"no-shadow": "error",
 
 		// Node.js and CommonJS
 
@@ -62,30 +58,11 @@
 			}
 		],
 		"new-cap": ["error", { "capIsNewExceptions": ["URI"] }],
-		"no-multi-spaces": [
-			"error",
-			{
-				"exceptions": {
-					"ImportDeclaration": true,
-					"VariableDeclarator": true
-				}
-			}
-		],
 		// avoid AutoSemicolonInsertion tricky cases when Semi:disabled
 		"no-unexpected-multiline": "error",
-		"no-multiple-empty-lines": [
-			"error",
-			{
-				"max": 2,
-				"maxBOF": 0,
-				"maxEOF": 0
-			}
-		],
-		"object-curly-spacing": ["error", "always"],
 		"operator-linebreak": ["error", "before"],
 		"quotes": ["error", "single", { "avoidEscape": true }],
 		// disable Semicolon
-		"semi": ["error", "never"],
 		"space-before-function-paren": ["error", "never"],
 		"space-in-parens": ["error", "always"],
 		"template-curly-spacing": ["error", "always"],
