@@ -1,21 +1,59 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
-# dependencies
+# package-managers
 /node_modules
+.pnpm-store
+
 
 # testing
 /coverage
+/test-results/
+/tests/coverage-report
+.local-browsers/
+/tests/installation/output/
+/tests/installation/.registry.json
 
-# production
+
+# building and compiling
 /build
+*dist*
+dist-*
+.output
+.data
+.nuxt
+.nitro
+.next/
+.swc/
+/docs/.vitepress/cache
+playground-temp
+temp
+.eslintcache
+packages/*
+drivers/
+.android-sdk/
+.gradle/
+nohup.out
+.trace
+.tmp
+playwright-report
+.cache/
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env
+.env.*
+!.env.example
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+logs
+*.log*
+chrome-user-data
+
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
