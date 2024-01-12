@@ -1,27 +1,21 @@
 {
-	"scripts": {
-		"precommit": "lint-staged"
-	},
+	"scripts": {},
 	"devDependencies": {
-		"@babel/core": "^7.0.0",
-		"babel-eslint": "^10.1.0",
-		"babel-preset-expo": "~8.0.0",
-		"eslint": "^6.8.0",
-		"eslint-config-prettier": "^6.10.0",
-		"eslint-plugin-import": "^2.20.1",
-		"eslint-plugin-prettier": "^3.1.2",
-		"eslint-plugin-react": "^7.18.3",
-		"husky": "^4.2.3",
-		"lint-staged": "^10.0.8",
-		"prettier": "^1.19.1",
-		"prettier-eslint": "^9.0.1",
-		"prettier-eslint-cli": "^5.0.0"
+		"@biomejs/biome": "1.5.1",
+		"@stylistic/eslint-plugin-js": "1.5.3",
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"@typescript-eslint/parser": "^6.18.1",
+		"eslint": "^8.*",
+		"eslint-plugin-import": "^2.29.1",
+		"lint-staged": "^15.*",
+		"simple-git-hooks": "2.9.0",
+		"typescript": "^5.3.3"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm run lint-staged",
+		"pre-push": "echo 'Pre-push'"
 	},
 	"lint-staged": {
-		"src/**/*.{js,jsx,tsx,ts,json,css,md}": [
-			"prettier-eslint --write",
-			"eslint --fix",
-			"git add"
-		]
+		"*.{js,jsx,tsx,ts,json}": ["eslint --fix", "git add"]
 	}
 }
