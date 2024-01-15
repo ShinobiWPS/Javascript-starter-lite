@@ -1,7 +1,11 @@
 {
-	"scripts": {},
+	"scripts": {
+		"commitlint": "commitlint --edit"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.1",
+		"@commitlint/cli": "^18.4.4",
+		"@commitlint/config-conventional": "^18.4.4",
 		"@stylistic/eslint-plugin-js": "1.5.3",
 		"@typescript-eslint/eslint-plugin": "^6.18.1",
 		"@typescript-eslint/parser": "^6.18.1",
@@ -13,7 +17,8 @@
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm run lint-staged",
-		"pre-push": "echo 'Pre-push'"
+		"pre-push": "echo 'Pre-push'",
+		"commit-msg": "pnpm run commitlint ${1}"
 	},
 	"lint-staged": {
 		"*.{js,jsx,tsx,ts,json}": ["eslint --fix", "git add"]
