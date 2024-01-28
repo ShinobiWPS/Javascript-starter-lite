@@ -30,7 +30,11 @@ modules.exports = {
 		"@stylistic/semi": [
 			"error",
 			"never"
-		]
+		],
+		"@stylistic/quote-props": [
+			"error", 
+			"as-needed"
+		],
 	},
 	settings: {
 		'import/resolver': {
