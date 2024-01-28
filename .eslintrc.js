@@ -35,6 +35,10 @@ modules.exports = {
 			"error", 
 			"as-needed"
 		],
+		"@stylistic/object-curly-spacing": [
+			"error", 
+			"always"
+		],
 	},
 	settings: {
 		'import/resolver': {
