@@ -30,7 +30,15 @@ modules.exports = {
 		"@stylistic/semi": [
 			"error",
 			"never"
-		]
+		],
+		"@stylistic/quote-props": [
+			"error", 
+			"as-needed"
+		],
+		"@stylistic/object-curly-spacing": [
+			"error", 
+			"always"
+		],
 	},
 	settings: {
 		'import/resolver': {
