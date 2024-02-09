@@ -16,8 +16,8 @@ module.exports = {
 		'plugin:import/typescript',
 		'plugin:react-hooks/recommended',
 		'plugin:jsx-a11y/recommended',
-		// "plugin:react/recommended"
-		// "plugin:vue/recommended"
+		'plugin:tailwindcss/recommended',
+		'plugin:react/recommended',
 	],
 	plugins: [
 		'@typescript-eslint',
@@ -59,7 +59,6 @@ module.exports = {
 					'.jsx',
 					'.ts',
 					'.tsx',
-					'.vue',
 				],
 			},
 		},
