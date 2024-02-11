@@ -1,6 +1,13 @@
 {
 	"recommendations": [
 		"vivaxy.vscode-conventional-commits",
-		"joshbolduc.commitlint"
+		"joshbolduc.commitlint",
+		"dbaeumer.vscode-eslint",
+		"editorconfig.editorconfig",
+		"ardisaurus.gitflow-actions-sidebar",
+		"andreabbondanza.ignoregit",
+		"arturock.gitstash",
+		"mhutchie.git-graph",
+		"sleistner.vscode-fileutils"
 	]
 }
