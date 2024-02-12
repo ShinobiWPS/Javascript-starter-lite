@@ -3,8 +3,10 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
-		react: true,
-		// svelte: true,
+    typescript: true,
+    react: true,
+    // svelte: true,
+    // vue: true,
     stylistic: {
       'jsx-one-expression-per-line': 'off',
     },
