@@ -28,7 +28,7 @@
     "commit-msg": "pnpm run commitlint ${1}"
   },
   "lint-staged": {
-    "*.{js,jsx,tsx,ts,json}": [
+    "*.{js,jsx,tsx,ts,json,jsonc}": [
       "eslint --fix",
       "git add"
     ]
