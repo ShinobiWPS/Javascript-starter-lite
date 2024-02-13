@@ -1,5 +1,7 @@
-// eslint.config.js
+/** @type {import('eslint').Linter.FlatConfig[]} */
 import antfu from '@antfu/eslint-config'
+
+// import JsxA11y from 'eslint-plugin-jsx-a11y'
 
 export default antfu(
   {
@@ -15,4 +17,6 @@ export default antfu(
     // ...globs
     ],
   },
+  // JsxA11y,
+  { rules: { 'accessible-emoji': 'off' } },
 )
