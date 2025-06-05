@@ -1,0 +1,34 @@
+{
+    "files": {
+        "include": [
+            "**/*.ts",
+            "**/*.tsx"
+        ],
+        "ignore": [
+            "dist",
+            ".vinxi",
+            ".wrangler",
+            ".vercel",
+            ".netlify",
+            ".output",
+            "build"
+        ]
+    },
+    "extends": [
+        "recommended"
+    ],
+    "plugins": ["typescript", "react"],
+    "rules": {
+        // React and Hooks rules
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        // TypeScript specific rules
+        "typescript/no-explicit-any": "warn",
+        "typescript/no-unused-vars": "warn",
+        // General rules
+        "no-console": "warn",
+        "no-debugger": "warn"
+    }
+}
