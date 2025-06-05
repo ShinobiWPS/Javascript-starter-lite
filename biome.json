@@ -1,18 +1,48 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineEnding": "lf",
+		"lineWidth": 90
+	},
 	"organizeImports": {
 		"enabled": true
 	},
+	"linter": {
+		"enabled": false
+	},
 	"javascript": {
 		"formatter": {
+			"quoteStyle": "single",
 			"semicolons": "asNeeded",
-			"quoteStyle": "single"
+			"trailingCommas": "all"
 		}
 	},
-	"linter": {
-		"enabled": false,
-		"rules": {
-			"recommended": true
-		}
+	"files": {
+		"ignoreUnknown": false,
+		"ignore": [
+			"pnpm-lock.yaml",
+			"package-lock.json",
+			"yarn.lock",
+			"bun.lock",
+			"routeTree.gen.ts",
+			"**/routeTree.gen.ts",
+			"drizzle/",
+			".drizzle/",
+			".vercel/",
+			".output/",
+			".vinxi/",
+			".wrangler/",
+			".netlify/",
+			"dist/",
+			"node_modules/"
+		]
 	}
 }
