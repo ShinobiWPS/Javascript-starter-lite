@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome",
+      "name": "debug Client",
       "request": "launch",
       "type": "chrome",
       "url": "http://localhost:5173",
@@ -10,6 +10,13 @@
       "port": 5173,
       "userDataDir": false
       
-    }
+    },
+    {
+			"name": "debug Server",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "pnpm run dev",
+			"cwd": "${workspaceFolder}"
+		},
   ]
 }
