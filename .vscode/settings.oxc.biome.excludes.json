@@ -28,36 +28,38 @@
 	"typescript.tsdk": "./node_modules/typescript/lib",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
-
 	// Optimize tool execution order and conflicts
 	"oxc.enable": true,
-	"eslint.validate": ["typescript", "typescriptreact"],
-	"eslint.workingDirectories": [{ "mode": "auto" }],
-
+	"eslint.validate": [
+		"typescript",
+		"typescriptreact"
+	],
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	],
 	// Optimize save actions - run them sequentially to avoid conflicts
 	"editor.codeActionsOnSave": {
-		"source.fixAll.oxc": "explicit",
-		"source.fixAll.biome": "explicit"
+		// "source.fixAll.oxc": "explicit",
+		"source.fixAll.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
 	},
-
 	// Separate formatting from save actions
 	"editor.formatOnSave": true,
 	"editor.formatOnSaveMode": "file", // Change from "modifications"
 	"editor.defaultFormatter": "biomejs.biome",
-
 	// Disable conflicting extensions
 	"prettier.enable": false,
 	"eslint.format.enable": false, // Don't use ESLint for formatting
-
 	"tailwind-fold.unfoldIfLineSelected": true,
 	"tailwind-fold.foldStyle": "QUOTES",
 	"tailwind-fold.foldedTextBackgroundColor": "rgba(181, 236, 255,0.3)",
 	"tailwind-fold.foldedText": "___",
 	"tailwind-fold.foldedTextColor": "rgba(255,0,255,0.8)",
 	"tailwind-fold.autoFold": true,
-
 	"[jsonc]": {
-		"editor.defaultFormatter": "biomejs.biome"
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "biomejs.biome"
