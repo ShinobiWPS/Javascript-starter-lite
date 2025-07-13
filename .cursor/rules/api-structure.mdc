@@ -1,0 +1,11 @@
+---
+description: "API requests are co-located within feature folders."
+globs: ["src/features/**/*"]
+alwaysApply: false
+# Rule Type: Auto Attached
+---
+# Project Structure: Bulletproof React
+
+- All HTTP request logic (e.g., TanStack Query functions) related to a feature must be placed in a dedicated `api` subfolder within that feature's directory.
+- Example: `src/features/users/api/getUsers.ts`
+- The shared HTTP client instance is imported from `src/lib/https.ts`.

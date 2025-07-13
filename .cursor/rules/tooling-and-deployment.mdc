@@ -1,0 +1,10 @@
+---
+description: "Guidelines for pnpm workspaces, Vercel deployment, and environment variables."
+alwaysApply: false
+# Rule Type: Agent Requested
+---
+- The project uses `pnpm` as the package manager. Always generate `pnpm` commands.
+- Deployment is to Vercel via a connected GitHub repository.
+- Environment variables must follow the `NEXT_PUBLIC_` prefix for client-side exposure. All other variables are server-side only.
+- When creating serverless functions, be mindful of Vercel's execution time and memory limits. Keep them lean.
+- All code pushed to `main` branch should be production-ready.

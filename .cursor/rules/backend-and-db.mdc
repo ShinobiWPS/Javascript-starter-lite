@@ -1,0 +1,10 @@
+---
+description: "Rules for Drizzle ORM, Better-Auth, and Postgres interactions."
+globs: ["src/db/**/*.ts", "src/server/**/*.ts", "src/lib/auth.ts"]
+alwaysApply: false
+# Rule Type: Auto Attached
+---
+- Database schema is defined and managed with Drizzle. All queries must be type-safe using the Drizzle ORM. Do not write raw SQL.
+- Authentication is handled by `better-auth`. Use its provided functions for session management and user authentication.
+- Web3 login is managed by `Reown` and `wagmi`. Ensure connectors are configured correctly and hooks are used as intended.
+- Use `date-fns` for all date/time manipulations. Do not use the native `Date` object directly for formatting or time-zone-sensitive operations.

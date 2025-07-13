@@ -1,0 +1,13 @@
+---
+description: "Rules for React 19, Shadcn, and component structure."
+globs: ["src/**/*.tsx"]
+alwaysApply: false
+# Rule Type: Auto Attached
+---
+- Components must follow React 19 best practices. No legacy lifecycle methods or patterns.
+- Use `lucide-react` for all icons.
+- UI is built with `shadcn/ui`. When generating UI, use its components (`Button`, `Input`, `Card`, etc.). Do not write raw HTML/CSS for elements that have a shadcn equivalent.
+- Forms must be implemented using `react-hook-form` integrated with `zod` for validation.
+- The `react-top-loading-bar` should be controlled by `tanstack-router` navigation events.
+- For charts, use `recharts`. Ensure they are responsive and lazy-loaded.
+- Use the provided `@component-template.tsx` for all new components, if present

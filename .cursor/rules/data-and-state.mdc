@@ -1,0 +1,12 @@
+---
+description: "Guidelines for data fetching with TanStack and state management with Zustand."
+globs: ["src/routes/**/*.tsx", "src/hooks/**/*.ts", "src/store/**/*.ts"]
+alwaysApply: false
+# Rule Type: Auto Attached
+---
+- Data fetching is managed by `tanstack-query` and `tanstack-router` loaders. Avoid `useEffect` for fetching. Fetch data on the server or in route loaders wherever possible.
+- State Management:
+  1. Prefer local state (e.g., `useState`).
+  2. If state needs to be shared, lift it to the nearest common ancestor.
+  3. Use server-cache state from `tanstack-query` as the primary source of truth for server data.
+  4. Use `zustand` only as a last resort for truly global, client-side state that cannot be derived from the URL or server cache. Keep Zustand stores minimal and focused on a single concern.

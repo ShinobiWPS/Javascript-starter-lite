@@ -1,0 +1,16 @@
+---
+description: "Core architectural and development principles for this project. Apply when implementing new features or refactoring."
+alwaysApply: false
+# Rule Type: Agent Requested
+---
+- Prioritize maintainability, robust error handling, and extendibility.
+- Leverage web-native APIs (e.g., Fetch API, URL, Intl) before adding a library.
+- After implementing a solution, perform a self-critique: does it compromise our core principles? If yes, propose an alternative.
+- All code must adhere to the best practices of the specific language and framework version used.
+- Use functional and declarative programing patterns; avoid
+classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g. ,
+isLoading, hasError) .
+- Do not run TS checks.
+- do not run builds.
