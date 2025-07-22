@@ -47,9 +47,39 @@ export default tseslint.config(
 	},
 	{
 		rules: {
-			// Disable expensive type-checking rules that OXLint handles
-			'@typescript-eslint/no-unused-vars': 'off', // OXLint handles this
-			'@typescript-eslint/no-explicit-any': 'off', // OXLint handles this
+			// Turn off rules that OXlint handles better/faster
+			'no-debugger': 'off',
+			'no-unused-vars': 'off',
+			'no-useless-escape': 'off',
+			'no-extra-boolean-cast': 'off',
+			'no-unsafe-finally': 'off',
+			'no-unsafe-negation': 'off',
+			'no-cond-assign': 'off',
+			'no-const-assign': 'off',
+			'no-dupe-keys': 'off',
+			'no-duplicate-case': 'off',
+			'no-empty-character-class': 'off',
+			'no-func-assign': 'off',
+			'no-invalid-regexp': 'off',
+			'use-isnan': 'off',
+			'valid-typeof': 'off',
+
+			// TypeScript rules covered by OXlint
+			'@typescript-eslint/no-explicit-any': 'off',
+			'@typescript-eslint/no-unused-vars': 'off',
+			'@typescript-eslint/no-duplicate-enum-values': 'off',
+			'@typescript-eslint/no-extra-non-null-assertion': 'off',
+			'@typescript-eslint/prefer-as-const': 'off',
+
+			// React rules covered by OXlint
+			'react/jsx-key': 'off',
+			'react/jsx-no-duplicate-props': 'off',
+			'react/jsx-no-undef': 'off',
+			'react/no-children-prop': 'off',
+			'react/no-direct-mutation-state': 'off',
+			'react/no-find-dom-node': 'off',
+			'react/no-string-refs': 'off',
+			'react/void-dom-elements-no-children': 'off',
 			'react-hooks/react-compiler': 'warn',
 		},
 	},
