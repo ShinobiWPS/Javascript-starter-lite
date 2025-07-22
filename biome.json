@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
@@ -8,41 +8,61 @@
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"indentWidth": 4,
+		"indentWidth": 2,
 		"lineEnding": "lf",
 		"lineWidth": 90
 	},
-	"organizeImports": {
-		"enabled": true
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
 	},
 	"linter": {
-		"enabled": false
+		"enabled": false,
+		"rules": {
+			"style": {
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			}
+		}
 	},
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "single",
 			"semicolons": "asNeeded",
-			"trailingCommas": "all"
+			"trailingCommas": "all",
+			"expand": "always"
 		}
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": [
-			"pnpm-lock.yaml",
-			"package-lock.json",
-			"yarn.lock",
-			"bun.lock",
-			"routeTree.gen.ts",
-			"**/routeTree.gen.ts",
-			"drizzle/",
-			".drizzle/",
-			".vercel/",
-			".output/",
-			".vinxi/",
-			".wrangler/",
-			".netlify/",
-			"dist/",
-			"node_modules/"
+		"includes": [
+			"**",
+			"!**/pnpm-lock.yaml",
+			"!**/package-lock.json",
+			"!**/yarn.lock",
+			"!**/bun.lock",
+			"!**/routeTree.gen.ts",
+			"!**/routeTree.gen.ts",
+			"!**/drizzle/",
+			"!**/.drizzle/",
+			"!**/.vercel/",
+			"!**/.output/",
+			"!**/.vinxi/",
+			"!**/.wrangler/",
+			"!**/.netlify/",
+			"!**/dist/",
+			"!**/node_modules/"
 		]
 	}
 }
