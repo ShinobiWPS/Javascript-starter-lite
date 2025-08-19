@@ -1,7 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+	  "lint": "pnpm dlx oxlint && pnpm dlx eslint",
+		"format": "biome format --write .",
+		"deps": "pnpm dlx npm-check-updates@latest --interactive --format group",
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.6.4",
