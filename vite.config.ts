@@ -9,7 +9,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
 		TanStackRouterVite({ autoCodeSplitting: true }),
-    react(),
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
     basicSsl(),
     VitePWA({
       registerType: 'autoUpdate',
