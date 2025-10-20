@@ -1,0 +1,38 @@
+version: v1
+# Settings for Cloud Run
+runConfig:
+  runCommand: node .output/server/index.mjs
+  minInstances: 0
+  maxInstances: 2
+  concurrency: 100
+  cpu: 2
+  memoryMiB: 1024
+# Environment variables and secrets
+env:
+  - variable: BASE_URL
+    value: "/"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: WAGMI_PROJECT_ID
+    value: "xx"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: VITE_WAGMI_PROJECT_ID
+    value: "x"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: VITE_SENTRY_DSN
+    value: "x"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: VITE_GOOGLE_MAPS_API_KEY
+    value: "x"
+    availability:
+      - BUILD
+      - RUNTIME
+ 
+
