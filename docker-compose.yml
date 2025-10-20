@@ -1,0 +1,15 @@
+services:
+   app:
+      build:
+         context: .
+         dockerfile: Dockerfile
+         #dockerfile: Dockerfile.prod
+         args:
+            NODE_ENV: development
+            BASE_URL: /
+            VITE_GOOGLE_MAPS_API_KEY: ${VITE_GOOGLE_MAPS_API_KEY}
+
+      ports:
+         - 3000:3000
+      env_file:
+         - .env.production
