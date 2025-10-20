@@ -1,0 +1,42 @@
+substitutions:
+  _BASE_URL: "https://certichain.io"
+  _VITE_BASE_URL: "https://certichain.io"
+  _WAGMI_PROJECT_ID: "bfac5074f81d8d9382f778fed51caca5"
+  _VITE_WAGMI_PROJECT_ID: "bfac5074f81d8d9382f778fed51caca5"
+  _VITE_SENTRY_DSN: "https://ec969206c86e4cdaa6bdc5accabc9146@bugtracking.koentlab.com/2"
+  _VITE_DEFILLAMA_BASE_URL: "https://api.llama.fi"
+  _VITE_DEFILLAMA_KEY: "not_needed"
+  _VITE_GOOGLE_MAPS_API_KEY: "AIzaSyBNGhvbPimwzdGUw56JQ5kInvTxFJuPDBU"
+
+steps:
+  - args:
+      - build
+      - -t
+      - eu.gcr.io/i-condition-468114-k8/github.com/conscience-dex/conscience-frontend:$BRANCH_NAME
+      - --build-arg
+      - BASE_URL=${_BASE_URL}
+      - --build-arg
+      - VITE_BASE_URL=${_VITE_BASE_URL}
+      - --build-arg
+      - WAGMI_PROJECT_ID=${_WAGMI_PROJECT_ID}
+      - --build-arg
+      - VITE_WAGMI_PROJECT_ID=${_VITE_WAGMI_PROJECT_ID}
+      - --build-arg
+      - VITE_SENTRY_DSN=${_VITE_SENTRY_DSN}
+      - --build-arg
+      - VITE_GOOGLE_MAPS_API_KEY=${_VITE_GOOGLE_MAPS_API_KEY}
+      - --build-arg
+      - VITE_DEFILLAMA_BASE_URL=${_VITE_DEFILLAMA_BASE_URL}
+      - --build-arg
+      - VITE_DEFILLAMA_KEY=${_VITE_DEFILLAMA_KEY}
+      - .
+    name: gcr.io/cloud-builders/docker
+
+images:
+  - eu.gcr.io/i-condition-468114-k8/github.com/conscience-dex/conscience-frontend:$BRANCH_NAME
+
+options:
+  machineType: "E2_HIGHCPU_8" # 8 vCPUs, 8 GB memory
+  logging: CLOUD_LOGGING_ONLY
+  substitutionOption: ALLOW_LOOSE
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
