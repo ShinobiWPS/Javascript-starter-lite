@@ -8,7 +8,7 @@
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}",
       "port": 5173,
-      "userDataDir": false
+      "userDataDir": ".vscode/chrome-user-data"
       
     },
     {
