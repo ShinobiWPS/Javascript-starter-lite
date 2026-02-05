@@ -1,5 +1,22 @@
 {
 	"servers": {
+		"chromedevtools/chrome-devtools-mcp": {
+         "type": "stdio",
+         "command": "wsl.exe",
+         /* "args": [
+            " -d Debian -- echo $PATH"
+         ], */
+         "args": [
+            "-d",
+            "Debian",
+            "--exec",
+            "zsh",
+            "-lc",
+            "npx chrome-devtools-mcp@latest  --headless \"${input:headless}\" --isolated \"${input:isolated}\" --channel \"${input:chrome_channel}\""
+         ],
+         "gallery": "https://api.mcp.github.com/v0/servers/13749964-2447-4c31-bcab-32731cced504",
+         "version": "0.0.1-seed"
+      	},
 		"atlassian/atlassian-mcp-server/*": {
 			"type": "http",
 			"url": "https://mcp.atlassian.com/v1/mcp",
