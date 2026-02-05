@@ -1,0 +1,22 @@
+{
+	"servers": {
+		"atlassian/atlassian-mcp-server/*": {
+			"type": "http",
+			"url": "https://mcp.atlassian.com/v1/mcp",
+		},
+		"kb": {
+			"command": "docker",
+			"args": [
+				"run",
+				"-i",
+				"--rm",
+				"--mount",
+				"type=bind,src=/Users/USER/URI/etc,dst=/projects/workspace",
+				"mcp/filesystem",
+				"/projects"
+			],
+			"type": "stdio"
+		}
+	},
+	"inputs": []
+}
