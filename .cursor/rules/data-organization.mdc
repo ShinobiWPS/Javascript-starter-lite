@@ -1,0 +1,16 @@
+## Data Organization Rules
+
+### Mock Data Files
+- All mock/static data must be placed in separate files in `src/data/` directory
+- Mock data files must be prefixed with "MOCK" in the filename (e.g., `MOCK-wallet-balance.ts`, `MOCK-user-data.ts`)
+- Mock data should be exported as named constants with TypeScript types
+- Mock data files should include comments indicating they are temporary and will be replaced with API calls
+
+### Utility Functions
+- All utility functions must be placed in separate files inside `src/utils/` directory
+- Group related utilities in the same file (e.g., `currency.ts`, `address.ts`, `formatting.ts`)
+- All utility functions must be pure functions with proper TypeScript types
+- Common utilities like `formatCurrency`, `truncateAddress`, `formatDate` should have dedicated files
+- Export utilities as named exports, not default exports
+
+
