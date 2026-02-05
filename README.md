@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to JS Starter Lite 👋</h1>
+<h1 align="center">Welcome to _my_ JS Starter Lite 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-2-blue.svg?cacheSeconds=2592000" />
   <a href="https://choosealicense.com/licenses/mit/" target="_blank">
