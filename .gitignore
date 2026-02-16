@@ -1,59 +1,93 @@
-# package-managers
+# macOS
+.DS_Store
+
+# package-managers / deps
+node_modules
 /node_modules
 .pnpm-store
 
-
-# testing
-/coverage
-/test-results/
-/tests/coverage-report
-.local-browsers/
-/tests/installation/output/
-/tests/installation/.registry.json
-
-
-# building and compiling
-/build
-*dist*
-dist-*
-.output
-.data
-.nuxt
-.nitro
-.next/
-.swc/
-/docs/.vitepress/cache
-playground-temp
-temp
-.eslintcache
-packages/*
-drivers/
-.android-sdk/
-.gradle/
-nohup.out
-.trace
-.tmp
-playwright-report
-.cache/
-
-# misc
-.DS_Store
+# env / local config
+.npmrc
 .env
 .env.*
 !.env.example
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.old.json
 logs
+nohup.out
+.trace
+.tmp
 *.log*
-chrome-user-data
+.vscode/*.log
 
-
-# Editor directories and files
+# editor / IDE
 .idea
+.history/
+.eslintcache
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw*
+
+# browser / local profiles
+.vscode/chrome-user-data
+chrome-user-data
+.local-browsers/
+
+# app state / secrets
+.docker-data
+certs/*.pem
+
+# build / compile outputs
+/dist
+*dist*
+dist-*
+/build
+.output
+.data
+.nuxt
+.nitro
+.next/
+/.swc/
+tsconfig.tsbuildinfo
+
+# docs caches / generated
+/docs/.vitepress/cache
+docs/1f
+docs/react-sdk
+docs/other
+
+# misc project dirs / scripts
+team-experience
+packages/*
+drivers/
+.android-sdk/
+.gradle/
+deploy-local.sh
+playground-temp
+temp
+
+# Meta configuration files
+/meta/*.*.json
+/meta/*.*.yaml
+/meta/*.*.yml
+/meta/*.*.xml
+
+# testing
+/coverage
+/test-results/
+/tests/coverage-report
+/tests/installation/output/
+/tests/installation/.registry.json
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+.cache/
