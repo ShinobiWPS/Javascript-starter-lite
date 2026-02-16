@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+#Windows WSL
+:Zone.Identifier
+
 # package-managers / deps
 node_modules
 /node_modules
