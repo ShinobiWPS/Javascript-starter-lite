@@ -8,9 +8,9 @@
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"indentWidth": 2,
+		"indentWidth": 3,
 		"lineEnding": "lf",
-		"lineWidth": 90
+		"lineWidth": 100
 	},
 	"assist": {
 		"actions": {
@@ -41,7 +41,7 @@
 			"quoteStyle": "single",
 			"semicolons": "asNeeded",
 			"trailingCommas": "all",
-			"expand": "always"
+			"expand": "auto"
 		}
 	},
 	"files": {
