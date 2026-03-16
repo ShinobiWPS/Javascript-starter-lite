@@ -1,0 +1,5 @@
+# ------------------------------------------------------------
+# 1) Default: normalize all *text* files in the repo to LF
+#    (prevents CRLF/LF churn across Windows/macOS/Linux)
+# ------------------------------------------------------------
+* text=auto eol=lf
