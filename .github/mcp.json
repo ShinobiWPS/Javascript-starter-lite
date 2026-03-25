@@ -1,0 +1,47 @@
+{
+   "servers": {
+      "chrome-devtools-mcp-cross-platform-graphical": {
+         "type": "stdio",
+         "command": "npx",
+         "args": [
+            "-y",
+            "chrome-devtools-mcp@latest",
+            "--browser-url=http://127.0.0.1:9222",
+            "--log-file=/tmp/chrome-devtools-browser-url-9222.log"
+         ]
+      },
+      "chrome-devtools-mcp-cross-platform-headless": {
+         "type": "stdio",
+         "command": "npx",
+         "args": [
+            "-y",
+            "chrome-devtools-mcp@latest",
+            "--headless",
+            "--isolated",
+            "--log-file=/tmp/chrome-devtools-headless.log"
+         ]
+      },
+      "context7": {
+         "url": "https://mcp.context7.com/mcp",
+         "headers": {}
+      },
+      "atlassian/atlassian-mcp-server": {
+         "type": "http",
+         "url": "https://mcp.atlassian.com/v1/mcp",
+      },
+      "custom-inside-docker": {
+         "command": "docker",
+         "args": [
+            "run",
+            "-i",
+            "--rm",
+            "--mount",
+            "type=bind,src=/Users/Bob/Documents/Workspace/custom/,dst=/projects/workspace",
+            "mcp/filesystem",
+            "/projects"
+         ],
+         "type": "stdio"
+      },
+   },
+   "inputs": []
+}
