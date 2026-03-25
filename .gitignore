@@ -58,6 +58,10 @@ dist-*
 .next/
 /.swc/
 tsconfig.tsbuildinfo
+**/routeTree.gen.ts
+routeTree.gen.ts
+.tanstack
+.nitro
 
 # docs caches / generated
 /docs/.vitepress/cache
