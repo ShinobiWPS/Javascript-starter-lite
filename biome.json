@@ -12,29 +12,18 @@
 		"lineEnding": "lf",
 		"lineWidth": 100
 	},
-	"assist": {
-		"actions": {
-			"source": {
-				"organizeImports": "on"
-			}
-		}
-	},
+ "assist": {
+      "actions": {
+         "source": {
+            "organizeImports": "on",
+            "useSortedAttributes": "on",
+            "useSortedInterfaceMembers": "on",
+            "useSortedProperties": "on"
+         }
+      }
+   },
 	"linter": {
 		"enabled": false,
-		"rules": {
-			"style": {
-				"noParameterAssign": "error",
-				"useAsConstAssertion": "error",
-				"useDefaultParameterLast": "error",
-				"useEnumInitializers": "error",
-				"useSelfClosingElements": "error",
-				"useSingleVarDeclarator": "error",
-				"noUnusedTemplateLiteral": "error",
-				"useNumberNamespace": "error",
-				"noInferrableTypes": "error",
-				"noUselessElse": "error"
-			}
-		}
 	},
 	"javascript": {
 		"formatter": {
